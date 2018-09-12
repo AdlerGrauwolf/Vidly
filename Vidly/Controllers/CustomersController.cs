@@ -20,10 +20,10 @@ namespace Vidly.Controllers
             base.Dispose(disposing);
         }
 
-        // GET: Costumers
+        // GET: Costumers test
         public ActionResult Index()
         {
-            // Eager loading
+            // Eager loading    
             var customer = _context.Customers.Include(c => c.MembershipType).ToList();
 
             return View(customer);
