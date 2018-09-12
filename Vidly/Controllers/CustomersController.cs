@@ -24,7 +24,9 @@ namespace Vidly.Controllers
         public ActionResult Index()
         {
             // Eager loading    
-            var customer = _context.Customers.Include(c => c.MembershipType).ToList();
+            var customer = _context.Customers
+                                   .Include(c => c.MembershipType)
+                                   .ToList();
 
             return View(customer);
         }
