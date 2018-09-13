@@ -1,0 +1,6 @@
+\.vs/*
+*\/.vs/*
+\.vs/
+Vidly/obj/Debug
+Vidly/obj/Debug/*
+*/Vidly/obj/Debug/*
