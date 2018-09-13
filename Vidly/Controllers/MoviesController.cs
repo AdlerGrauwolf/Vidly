@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 
 using Vidly.Models;
@@ -8,51 +10,37 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        private readonly List<Movie> _movies = default(List<Movie>);
+        #region Notes
+        // Property attribute routing example: [Route("movies/released/{year:regex(\\d{4}):range(1900, 2100)}/{month:regex(\\d{2}):range(1,2)}")]
+        #endregion
+
+        private readonly ApplicationDbContext _context = default(ApplicationDbContext);
 
         public MoviesController()
         {
-            _movies = new List<Movie>()
-            {
-                new Movie() { Id = 1, Name = "Shrek" },
-                new Movie() { Id = 2, Name = "Wall-e" }
-            };
+            _context = new ApplicationDbContext();
         }
 
         // GET: Movies
         public ActionResult Index()
         {
-            return View(_movies);
+            var movies = _context.Movies
+                                 .Include(m => m.MovieGenre)
+                                 .ToList();
+
+            return View(movies);
         }
 
-        public ActionResult Random()
+        public ActionResult Details(int id)
         {
-            var movie = new Movie() { Name = "Shrek!" };
+            Movie movie = _context.Movies
+                                  .Include(m => m.MovieGenre)
+                                  .SingleOrDefault(m => m.Id == id);
 
-            var customers = new List<Customer>()
-            {
-                new Customer(){ Name = "Customer 1" },
-                new Customer(){ Name = "Customer 2" }
-            };
+            if (movie == null)
+                return HttpNotFound();
 
-            var randomViewModel = new RandomMovieViewModel()
-            {
-                Movie = movie,
-                Customers = customers
-            };
-
-            return View(randomViewModel);
-        }
-
-        public ActionResult Edit(int id)
-        {
-            return Content($"Id = {id}");
-        }
-
-        [Route("movies/released/{year:regex(\\d{4}):range(1900, 2100)}/{month:regex(\\d{2}):range(1,2)}")]
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content($"{year}/{month}");
+            return View(movie);
         }
     }
 }
