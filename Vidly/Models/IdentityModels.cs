@@ -29,6 +29,9 @@ namespace Vidly.Models
         // Represent Table Genre
         public DbSet<MovieGenre> MovieGenre { get; set; }
 
+        // Represent Table MemberShipTypes
+        public DbSet<MembershipType> MembershipTypes { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

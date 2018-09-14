@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Vidly.Models
@@ -11,11 +12,10 @@ namespace Vidly.Models
         [StringLength(255)]
         public string Name { get; set; }
         
+        [DisplayName("Day of Birth")]
         public DateTime? Birthday { get; set; }
 
         public bool IssubscribedToNewsLatter { get; set; }
-
-
 
         // Navigation property, put first the object and then the id property for good table creation
         public MembershipType MembershipType { get; set; }
