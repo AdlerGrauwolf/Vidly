@@ -4,7 +4,7 @@ using Vidly.Models;
 
 namespace Vidly.ViewModel
 {
-    public class NewClassViewModel
+    public class NewCustomerViewModel
     {
         public List<MembershipType> MembershipTypes { get; set; }
 

@@ -329,7 +329,6 @@ C:\GitHub\Vidly\Vidly\Vidly\bin\Microsoft.AI.DependencyCollector.xml
 C:\GitHub\Vidly\Vidly\Vidly\bin\Microsoft.AI.WindowsServer.xml
 C:\GitHub\Vidly\Vidly\Vidly\bin\Microsoft.AI.Web.xml
 C:\GitHub\Vidly\Vidly\Vidly\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMemberShipType.resources
@@ -394,3 +393,4 @@ C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\vbc.exe.config
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\vbc.rsp
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\VBCSCompiler.exe
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\VBCSCompiler.exe.config
+C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
