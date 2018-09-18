@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+
+@if (Model.Count() > 0)
+{
+    <table class="table	table-bordered	table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Customer
+                </th>
+                <th>
+                    Discount Rate
+                </th>
+            </tr>
+        </thead>
+        @foreach (var customer in Model)
+        {
+            <tr>                
+                <td>
+                    @Html.ActionLink(customer.Name, "Details", "Customer", new { id = customer.Id }, null)
+                </td>
+                <td>
+                    @customer.MembershipType.Name
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>We don't have any customers yet</p>
+}

@@ -257,7 +257,6 @@ D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNameToMembershipType.resourc
 D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipTypeName.resources
 D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddCustomerBirthday.resources
 D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddCustomerBirthday1.resources
-D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
 D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMovieAndMovieGenreTables.resources
 D:\GitHub\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenreTable.resources
 C:\GitHub\Vidly\Vidly\Vidly\bin\ApplicationInsights.config
