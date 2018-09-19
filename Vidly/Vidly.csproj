@@ -206,7 +206,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,6 +255,14 @@
     <Compile Include="Migrations\201809130234468_PopulateGenreTable.Designer.cs">
       <DependentUpon>201809130234468_PopulateGenreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809192006347_NullableCustomerDateTypes.cs" />
+    <Compile Include="Migrations\201809192006347_NullableCustomerDateTypes.Designer.cs">
+      <DependentUpon>201809192006347_NullableCustomerDateTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809192016403_CorrectFamilyGenreTypo.cs" />
+    <Compile Include="Migrations\201809192016403_CorrectFamilyGenreTypo.Designer.cs">
+      <DependentUpon>201809192016403_CorrectFamilyGenreTypo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -266,7 +274,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\CustomerFormViewModel.cs" />
-    <Compile Include="ViewModel\RandomMovieViewModel.cs" />
+    <Compile Include="ViewModel\MovieFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
@@ -274,6 +282,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Utility.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -332,10 +341,11 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\_CustomerList.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
-    <Content Include="Views\Movies\_MovieList.cshtml" />
-    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\_MovieList.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -386,6 +396,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809130234468_PopulateGenreTable.resx">
       <DependentUpon>201809130234468_PopulateGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809192006347_NullableCustomerDateTypes.resx">
+      <DependentUpon>201809192006347_NullableCustomerDateTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809192016403_CorrectFamilyGenreTypo.resx">
+      <DependentUpon>201809192016403_CorrectFamilyGenreTypo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

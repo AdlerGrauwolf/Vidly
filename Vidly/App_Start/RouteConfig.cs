@@ -15,8 +15,8 @@ namespace Vidly
             // in this case Default is the most general of the routes
             //routes.MapRoute(
             //    name: "MoviesByReleaseDate",
-            //    url: "{movies}/{released}/{year}/{month}",
-            //    defaults: new { controller = "Movies", action = "ByReleaseDate" },
+            //    url: "{movie}/{released}/{year}/{month}",
+            //    defaults: new { controller = "Movie", action = "ByReleaseDate" },
             //    constraints: new { year = @"\d{4}", month = @"\d{2}" }
             //);
 

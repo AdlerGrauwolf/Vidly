@@ -9,6 +9,7 @@ namespace Vidly.AutoMapperConf
         public AutoMapperProfile()
         {
             CreateMap<Customer, Customer>();
+            CreateMap<Movie, Movie>();
         }
 
         public static void Map()
