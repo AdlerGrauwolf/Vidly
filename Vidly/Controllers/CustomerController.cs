@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using System.Data.Entity;
 
+using AutoMapper;
+
 using Vidly.Models;
 using Vidly.ViewModel;
 
@@ -46,22 +48,54 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            var viewModel = new NewCustomerViewModel();
+            var viewModel = new CustomerFormViewModel();
             viewModel.MembershipTypes = _context.MembershipTypes.ToList();
 
-            return View(viewModel);
+            return View("CustomerForm", viewModel);
         }
 
         [HttpPost]
-        public ActionResult Create(Customer customer)
+        public ActionResult Save(Customer customer)
         {
             // The view contains all the properties of the Customer model
             // so it can mapp the values correctly regarding its model its of type NewCustomerViewModel
             // (NewCustomerViewModel contains a property of type Customer) 
-            _context.Customers.Add(customer);
+            if (customer.Id == default(int))
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+
+                // You can use automaper like this:
+                Mapper.Map(customer, customerInDb);
+
+                // Or you can also map the fields manually like this: 
+                //customerInDb.Name = customer.Name;
+                //customerInDb.Birthday = customer.Birthday;
+                //customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                //customerInDb.IssubscribedToNewsLatter = customer.IssubscribedToNewsLatter;            
+            }
+
             _context.SaveChanges();
+                            
 
             return RedirectToAction("Index", "Customer");
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == Id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new CustomerFormViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+
+            return View("CustomerForm", viewModel);
         }
     }
 }
