@@ -2,17 +2,20 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
+using Vidly.Models.CustomValidations;
+
 namespace Vidly.Models
 {
     public class Customer
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter customer's name")]
         [StringLength(255)]
         public string Name { get; set; }
         
         [DisplayName("Day of Birth")]
+        [Min18YearsIfMember]
         public DateTime? Birthday { get; set; }
 
         public bool IssubscribedToNewsLatter { get; set; }

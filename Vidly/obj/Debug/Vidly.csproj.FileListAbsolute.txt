@@ -538,3 +538,4 @@ C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.CorrectFamilyGenreTypo.resources
+C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache

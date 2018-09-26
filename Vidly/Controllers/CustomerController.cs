@@ -57,6 +57,18 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
+            // Access to validation data
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new CustomerFormViewModel()
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+
+                return View("CustomerForm", viewModel);
+            }
+
             // The view contains all the properties of the Customer model
             // so it can mapp the values correctly regarding its model its of type NewCustomerViewModel
             // (NewCustomerViewModel contains a property of type Customer) 
