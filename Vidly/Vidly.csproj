@@ -263,10 +263,15 @@
     <Compile Include="Migrations\201809192016403_CorrectFamilyGenreTypo.Designer.cs">
       <DependentUpon>201809192016403_CorrectFamilyGenreTypo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810082052346_ReleaseDateAndInStockMoviePropertiesRequired.cs" />
+    <Compile Include="Migrations\201810082052346_ReleaseDateAndInStockMoviePropertiesRequired.Designer.cs">
+      <DependentUpon>201810082052346_ReleaseDateAndInStockMoviePropertiesRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomValidations\Min18YearsIfMember.cs" />
+    <Compile Include="Models\Enum.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -403,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809192016403_CorrectFamilyGenreTypo.resx">
       <DependentUpon>201809192016403_CorrectFamilyGenreTypo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810082052346_ReleaseDateAndInStockMoviePropertiesRequired.resx">
+      <DependentUpon>201810082052346_ReleaseDateAndInStockMoviePropertiesRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

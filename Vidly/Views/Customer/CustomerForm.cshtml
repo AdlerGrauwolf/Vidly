@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var title = "New Customer";
 
-    if(Model?.Customer != null && Model.Customer.Id != default(int))
+    if (Model?.Customer != null && Model.Customer.Id != default(int))
     {
         title = "Edit Customer";
     }
@@ -15,8 +15,17 @@
 
 @using (Html.BeginForm("Save", "Customer", "POST"))
 {
+    //Displays all errors as unordered list
+    @*@Html.ValidationSummary()*@
+
+    @Html.AntiForgeryToken()
     @Html.HiddenFor(m => m.Customer.Id)
 
+    <div class="form-group">
+        @Html.LabelFor(m => m.Customer.MembershipTypeId)
+        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
+    </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
         @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control", autocomplete = "off" })
@@ -27,11 +36,6 @@
         @Html.TextBoxFor(m => m.Customer.Birthday, "{0:d MMM yyyy}", new { @class = "form-control", autocomplete = "off" })
         @Html.ValidationMessageFor(m => m.Customer.Birthday)
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Customer.MembershipTypeId)
-        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), "Select Membership Type", new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Customer.MembershipTypeId)
-    </div>
     <div class="form-check">
         <label>
             @Html.CheckBoxFor(m => m.Customer.IssubscribedToNewsLatter, new { @class = "form-check-input" }) Subscribe to Newslatter?
@@ -40,3 +44,4 @@
     <br />
     <button type="submit" class="btn btn-primary">Save</button>
 }
+@section scripts{ @Scripts.Render("~/bundles/jqueryval"); }
