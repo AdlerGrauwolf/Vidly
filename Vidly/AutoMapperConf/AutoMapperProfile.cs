@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 
+using Vidly.Dtos;
 using Vidly.Models;
 
 namespace Vidly.AutoMapperConf
@@ -9,6 +10,11 @@ namespace Vidly.AutoMapperConf
         public AutoMapperProfile()
         {
             CreateMap<Customer, Customer>();
+            CreateMap<Customer, CustomerDto>();
+
+            CreateMap<CustomerDto, CustomerDto>();
+            CreateMap<CustomerDto, Customer>();
+
             CreateMap<Movie, Movie>();
         }
 

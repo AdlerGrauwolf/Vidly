@@ -535,8 +535,13 @@ C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.dll
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.pdb
 C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ReleaseDateAndInStockMoviePropertiesRequired.resources
+C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.ValueTuple.dll
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.dll
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.xml
+C:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.IO.FileSystem.dll
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.Security.Cryptography.Primitives.dll
-C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.ValueTuple.dll
-C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache

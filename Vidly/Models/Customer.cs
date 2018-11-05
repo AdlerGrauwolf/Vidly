@@ -18,7 +18,7 @@ namespace Vidly.Models
         [Min18YearsIfMember]
         public DateTime? Birthday { get; set; }
 
-        public bool IssubscribedToNewsLatter { get; set; }
+        public bool IsSubscribedToNewsLatter { get; set; }
 
         // Navigation property, put first the object and then the id property for good table creation
         public MembershipType MembershipType { get; set; }
