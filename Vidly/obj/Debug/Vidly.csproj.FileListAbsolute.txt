@@ -545,3 +545,12 @@ C:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.IO.FileSystem.dll
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\GitHub\Vidly\Vidly\Vidly\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.dll
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.xml
+D:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.NullableCustomerDateTypes.resources
+D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.CorrectFamilyGenreTypo.resources
+D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ReleaseDateAndInStockMoviePropertiesRequired.resources
