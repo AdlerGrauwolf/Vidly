@@ -554,3 +554,4 @@ D:\GitHub\Vidly\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.NullableCustomerDateTypes.resources
 D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.CorrectFamilyGenreTypo.resources
 D:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.Migrations.ReleaseDateAndInStockMoviePropertiesRequired.resources
+C:\GitHub\Vidly\Vidly\Vidly\obj\Debug\Vidly.csprojAssemblyReference.cache
