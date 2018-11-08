@@ -1,3 +1,106 @@
-﻿.mb-10{
+﻿.mb-10 {
     margin-bottom: 10px;
+}
+
+.button {
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    padding: 7px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+    .button:focus {
+        outline: none;
+    }
+
+.button-green {
+    color: #4CAF50;
+    background-color: #FFF;
+    border: 1px solid #4CAF50 !important;
+}
+
+    .button-green:hover {
+        background-color: #4CAF50;
+        color: #FFF;
+        box-shadow: 0 0px 9px 0 rgba(76, 175, 80, 0.24), 0 5px 70px 0 rgba(76, 175, 80, 0.19);
+    }
+
+.button-red {
+    color: #f44336;
+    background-color: #FFF;
+    border: 1px solid #f44336 !important;
+}
+
+    .button-red:hover {
+        background-color: #f44336;
+        color: #FFF;
+        box-shadow: 0 0px 9px 0 rgba(244, 67, 54, 0.24), 0 5px 70px 0 rgba(244, 67, 54, 0.19);
+    }
+
+.button-blue {
+    color: #008CBA;
+    background-color: #FFF;
+    border: 1px solid #008CBA !important;
+}
+
+    .button-blue:hover {
+        background-color: #008CBA;
+        color: #FFF;
+        box-shadow: 0 0px 9px 0 rgba(0, 140, 186, 0.24), 0 5px 70px 0 rgba(0, 140, 186, 0.19);
+    }
+
+.button-grey {
+    color: #e7e7e7;
+    background-color: #FFF;
+    border: 1px solid #e7e7e7 !important;
+}
+
+    .button-grey:hover {
+        background-color: #e7e7e7;
+        color: #FFF;
+        box-shadow: 0 0px 9px 0 rgba(231, 231, 231, 0.24), 0 5px 70px 0 rgba(231, 231, 231, 0.19);
+    }
+
+.button-black {
+    color: #555555;
+    background-color: #FFF;
+    border: 1px solid #555555 !important;
+}
+
+    .button-black:hover {
+        background-color: #555555;
+        color: #FFF;
+        box-shadow: 0 0px 9px 0 rgba(85, 85, 85, 0.24), 0 5px 70px 0 rgba(85, 85, 85, 0.19);
+    }
+
+.button-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-xsm {
+    font-size: 8px !important;
+}
+
+.button-sm {
+    font-size: 10px !important;
+}
+
+.button-md {
+    font-size: 14px !important;
+}
+
+.button-bg {
+    font-size: 16px !important;
+}
+
+.button-xbg{
+    font-size: 18px !important;
 }

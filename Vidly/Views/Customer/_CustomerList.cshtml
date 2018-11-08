@@ -11,6 +11,7 @@
                 <th>
                     Discount Rate
                 </th>
+                <th>&nbsp;</th>
             </tr>
         </thead>
         @foreach (var customer in Model)
@@ -21,6 +22,9 @@
                 </td>
                 <td>
                     @customer.MembershipType.Name
+                </td>
+                <td>
+                    <button type="button" data-customer-id="@customer.Id" class="js-customer-delete glyphicon glyphicon-trash button button-red"></button>
                 </td>
             </tr>
         }

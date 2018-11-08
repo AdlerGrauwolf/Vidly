@@ -7,3 +7,26 @@
 
 <h1>Customers</h1>
 @Html.Partial("_CustomerList")
+
+@section scripts{
+    <script type="text/javascript">
+
+        var @
+
+        $(document).ready(function () {
+            DeleteCustomer();
+        });
+
+        function DeleteCustomer() {
+            $(".js-customer-delete").on("click", function () {
+
+                var element = $(this);
+                var customerId = element.attr("data-customer-id");
+
+                StandarAjaxCall("");
+
+            });            
+        }
+
+    </script>
+}
