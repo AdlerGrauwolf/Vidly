@@ -9,24 +9,9 @@
 @Html.Partial("_CustomerList")
 
 @section scripts{
-    <script type="text/javascript">
+    @Scripts.Render("~/bundles/vidly-customer")
 
-        var @
-
-        $(document).ready(function () {
-            DeleteCustomer();
-        });
-
-        function DeleteCustomer() {
-            $(".js-customer-delete").on("click", function () {
-
-                var element = $(this);
-                var customerId = element.attr("data-customer-id");
-
-                StandarAjaxCall("");
-
-            });            
-        }
-
+    <script type="text/javascript">        
+        var _apiRouteURI = '@Url.HttpRouteUrl("DefaultApi", new { controller = "Customers" })';
     </script>
 }
