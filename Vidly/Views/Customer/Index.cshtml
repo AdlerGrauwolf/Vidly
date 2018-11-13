@@ -12,6 +12,9 @@
     @Scripts.Render("~/bundles/vidly-customer")
 
     <script type="text/javascript">        
-        var _apiRouteURI = '@Url.HttpRouteUrl("DefaultApi", new { controller = "Customers" })';
+
+        var _customerApiRouteURI = '@Url.HttpRouteUrl("DefaultApi", new { controller = "Customers" })';                
+        var _customerEditAction = '@Url.Action("Edit", "Customer")';
+
     </script>
 }

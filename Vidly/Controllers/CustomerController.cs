@@ -26,16 +26,12 @@ namespace Vidly.Controllers
         // GET: Costumers test
         public ActionResult Index()
         {
-            // Eager loading    
-            var customer = _context.Customers
-                                   .Include(c => c.MembershipType)
-                                   .ToList();
-
-            return View(customer);
+            return View();
         }
 
         public ActionResult Details(int id)
         {
+            // Eager loading   
             Customer customer = _context.Customers
                                         .Include(c => c.MembershipType)
                                         .SingleOrDefault(c => c.Id == id);
