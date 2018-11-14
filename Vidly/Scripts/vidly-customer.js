@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     LoadCustomersTable();
-    BindDeleteCustomerEvent();
 });
 
 function LoadCustomersTable() {
@@ -29,23 +28,21 @@ function BuildCustomerTable(jsonData) {
     }
 
     $("#tbl-customers > tbody").append(tableRows);
-    $("#tbl-customers").DataTable();
+    var tableCustomer = $("#tbl-customers").DataTable();
+    BindDeleteCustomerEvent(tableCustomer);
 }
 
-function BindDeleteCustomerEvent() {
+function BindDeleteCustomerEvent(tableCustomer) {    
     $("#tbl-customers").on("click", ".js-customer-delete", function () {
-        DeleteCustomer($(this));
-    });
-}
-
-function DeleteCustomer(element) {
-    bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
-        if (result) {
-            var deleteRequest = apiMethods.delete;
-            var customerId = element.attr("data-customer-id");
-            StandarAjaxCall(_customerApiRouteURI + "/" + customerId, deleteRequest, "", function (data) {
-                element.parents("tr").remove();
-            });
-        }
+        var element = $(this);
+        bootbox.confirm("Are you sure you want to delete this customer?", function (result) {
+            if (result) {
+                var deleteRequest = apiMethods.delete;
+                var customerId = element.attr("data-customer-id");
+                StandarAjaxCall(_customerApiRouteURI + "/" + customerId, deleteRequest, "", function (data) {                    
+                    tableCustomer.row(element.parents("tr")).remove().draw();
+                });
+            }
+        });
     });
 }
