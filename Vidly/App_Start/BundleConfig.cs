@@ -28,6 +28,9 @@ namespace Vidly
             bundles.Add(new ScriptBundle("~/bundles/vidly-customer").Include(
                         "~/Scripts/vidly-customer.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/vidly-movies").Include(
+                        "~/Scripts/vidly-movies.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                        "~/Content/bootstrap-lumen.css",
                        "~/Content/Site.css",

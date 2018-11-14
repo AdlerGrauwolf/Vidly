@@ -5,7 +5,14 @@
 }
 
 <h2>Movies</h2>
-
-@Html.ActionLink("New Movie","New", "Movie", null, new { @class = "btn btn-primary mb-10" })
-
 @Html.Partial("_MovieList")
+
+@section scripts{
+    @Scripts.Render("~/bundles/vidly-movies")
+
+    <script type="text/javascript">
+        var _movieApiRouteURI = '@Url.HttpRouteUrl("DefaultApi", new { controller = "Movies" })';
+        var _movieNewAction = '@Url.Action("New", "Movie")';
+        var _movieEditAction = '@Url.Action("Edit", "Movie")';
+    </script>
+}

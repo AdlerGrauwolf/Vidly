@@ -2,6 +2,14 @@
     margin-bottom: 10px;
 }
 
+.mb-45 {
+    margin-bottom: 45px;
+}
+
+.float-right{
+    float: right;
+}
+
 .button {
     background-color: white;
     border: 1px solid #e7e7e7;

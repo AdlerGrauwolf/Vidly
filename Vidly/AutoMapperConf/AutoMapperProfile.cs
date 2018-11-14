@@ -15,9 +15,11 @@ namespace Vidly.AutoMapperConf
             // Domain to Dto
             CreateMap<Customer, CustomerDto>();
             CreateMap<CustomerDto, CustomerDto>();
+            CreateMap<MembershipType, MembershipTypeDto>();
+
             CreateMap<Movie, MovieDto>();
             CreateMap<MovieDto, MovieDto>();
-            CreateMap<MembershipType, MembershipTypeDto>();
+            CreateMap<MovieGenre, MovieGenreDto>();
 
             // Ignore Id when mapping updating values
             CreateMap<CustomerDto, Customer>().ForMember(c => c.Id, opt => opt.Ignore());

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -22,7 +23,11 @@ namespace Vidly.Controllers.Api
         [HttpGet]
         public IHttpActionResult GetMovies()
         {
-            return Ok(_context.Movies.Select(Mapper.Map<Movie, MovieDto>));
+            var movies = _context.Movies
+                .Include(m => m.MovieGenre)
+                .Select(Mapper.Map<Movie, MovieDto>);
+
+            return Ok(movies);
         }
 
         // api/movies/1

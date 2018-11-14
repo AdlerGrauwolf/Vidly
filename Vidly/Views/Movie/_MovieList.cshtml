@@ -1,28 +1,15 @@
-﻿@model IEnumerable<Vidly.Models.Movie>
-
-@if (Model.Count() > 0)
-{
-    <table class="table	table-bordered	table-hover">
-        <thead>
-            <tr>
-                <th>Movie</th>
-                <th>Genre</th>
-            </tr>
-        </thead>
-        @foreach (var movie in Model)
-        {
-            <tr>
-                <td>
-                    @Html.ActionLink(movie.Name, "Edit", "Movie", new { id = movie.Id }, null)
-                </td>
-                <td>
-                    @movie.MovieGenre.Name
-                </td>
-            </tr>
-        }
-    </table>
-}
-else
-{
-    <p>We don't have any customers yet</p>
-}
+﻿<div class="mb-45">
+    <button type="button" class="js-addMovie float-right glyphicon glyphicon-plus-sign button button-green button-sm"></button>
+</div>
+<table class="table	table-bordered	table-hover" id="tbl-movies">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Genre</th>
+            <th>
+                &nbsp;
+            </th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
