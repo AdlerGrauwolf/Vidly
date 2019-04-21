@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     LoadMoviesTable();
-    BindNewMovieEvent();    
 });
 
 function BindNewMovieEvent() {
@@ -10,10 +9,39 @@ function BindNewMovieEvent() {
 }
 
 function LoadMoviesTable() {
-    StandarAjaxCall(_movieApiRouteURI, apiMethods.fetch, "", BuildMoviesTable);
+    StandarAjaxCall(_movieApiRouteURI, apiMethods.fetch, "", ProcessMovieIndex);
 }
 
-function BuildMoviesTable(jsonData) {  
+function ProcessMovieIndex(data) {
+    var userInRole = $("#isInRole").val();
+
+    if (userInRole == "True")
+        BuildAdminMoviesTable(data);
+    else
+        BuildMoviesTable(data);
+}
+
+function BuildMoviesTable(jsonData) {
+    var tableRows = "";
+    for (var index in jsonData) {
+        var movie = jsonData[index];
+
+        var columns = "<td>" + movie.name + "</td>";
+        columns += "<td>" + movie.movieGenre.name + "</td>";
+        columns += "<td>&nbsp;</td>";
+
+        var row = "<tr>";
+        row += columns;
+        row += "</tr>";
+
+        tableRows += row;
+    }
+
+    $("#tbl-movies > tbody").append(tableRows);
+    $("#tbl-movies").DataTable();
+}
+
+function BuildAdminMoviesTable(jsonData) {  
     var tableRows = "";
     for (var index in jsonData) {
         var movie = jsonData[index];
@@ -30,6 +58,10 @@ function BuildMoviesTable(jsonData) {
     }
 
     $("#tbl-movies > tbody").append(tableRows);
+
+    $("#btnAddNewMovie").append("<button type='button' class='js-addMovie float-right glyphicon glyphicon-plus-sign button button-green button-sm'></button>");
+    BindNewMovieEvent();    
+
     var tableMovies = $("#tbl-movies").DataTable();
     BindDeleteMovieEvent(tableMovies);
 }

@@ -44,7 +44,7 @@ namespace Vidly.Controllers
 
         public ActionResult New()
         {
-            var viewModel = new CustomerFormViewModel();
+            var viewModel = new CustomerViewModel();
             viewModel.Customer = new Customer();
             viewModel.MembershipTypes = _context.MembershipTypes.ToList();
 
@@ -58,7 +58,7 @@ namespace Vidly.Controllers
             // Access to validation data
             if (!ModelState.IsValid)
             {
-                var viewModel = new CustomerFormViewModel()
+                var viewModel = new CustomerViewModel()
                 {
                     Customer = customer,
                     MembershipTypes = _context.MembershipTypes.ToList()
@@ -99,7 +99,7 @@ namespace Vidly.Controllers
             if (customer == null)
                 return HttpNotFound();
 
-            var viewModel = new CustomerFormViewModel()
+            var viewModel = new CustomerViewModel()
             {
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()

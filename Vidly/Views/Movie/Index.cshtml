@@ -1,4 +1,5 @@
-﻿
+﻿@model Vidly.ViewModel.MovieViewModel
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,6 +7,8 @@
 
 <h2>Movies</h2>
 @Html.Partial("_MovieList")
+
+@Html.HiddenFor(model => model.UserIsInRole, new { id = "isInRole" })
 
 @section scripts{
     @Scripts.Render("~/bundles/vidly-movies")
